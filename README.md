@@ -1,2 +1,2 @@
 # Programaci-n-1
-Desafíos
+Téorico y práctico. Desafíos de CREA. 
