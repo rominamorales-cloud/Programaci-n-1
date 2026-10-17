@@ -1,0 +1,76 @@
+#Desafío 96
+inventario = {}
+#Función para agregar productos
+def agregar_producto():
+    codigo = input("Ingrese el código del producto: ")
+    if codigo in inventario:
+        print("El producto ya existe.")
+        return
+    nombre = input("Ingrese el nombre: ")
+    try:
+        precio = float(input("Ingrese el precio: "))
+        stock = int(input("Ingrese la cantidad en stock: "))
+        if precio < 0 or stock < 0:
+            print("El precio y el stock no pueden ser negativos.")
+            return
+    except ValueError:
+        print("Ingrese valores válidos.")
+        return
+    inventario[codigo] = {
+        "nombre": nombre,
+        "precio": precio,
+        "stock": stock
+    }
+
+    print("Producto agregado correctamente.")
+
+#Función para actualizar el stock
+def actualizar_stock():
+    codigo = input("Ingrese el código del producto: ")
+
+    if codigo not in inventario:
+        print("El producto no existe.")
+        return
+    try:
+        nuevo_stock = int(input("Ingrese el nuevo stock: "))
+        if nuevo_stock < 0:
+            print("El stock no puede ser negativo.")
+            return
+        inventario[codigo]["stock"] = nuevo_stock
+        print("Stock actualizado correctamente.")
+
+    except ValueError:
+        print("Ingrese una cantidad válida.")
+#Función para buscar productos
+def buscar_producto():
+    codigo = input("Ingrese el código del producto: ")
+    if codigo in inventario:
+        producto = inventario[codigo]
+        print("Código:", codigo)
+        print("Nombre:", producto["nombre"])
+        print("Precio: $", producto["precio"])
+        print("Stock:", producto["stock"])
+    else:
+        print("Producto no encontrado.")
+
+#Menú principal del programa
+def mostrar_menu():
+    while True:
+        print("\n--- INVENTARIO ---")
+        print("1. Agregar producto")
+        print("2. Actualizar stock")
+        print("3. Buscar producto")
+        print("4. Salir")
+        opcion = input("Seleccione una opción: ")
+        if opcion == "1":
+            agregar_producto()
+        elif opcion == "2":
+            actualizar_stock()
+        elif opcion == "3":
+            buscar_producto()
+        elif opcion == "4":
+            print("Saliendo del programa.")
+            break
+        else:
+            print("Opción inválida.")
+mostrar_menu()
