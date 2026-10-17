@@ -1,0 +1,45 @@
+#Solución
+# Lista que almacena los libros
+biblioteca = []
+#Agregar libro
+def agregar_libro(titulo):
+    biblioteca.append(titulo)
+print(f'Libro "{titulo}" agregado correctamente.')
+#Eliminar libro
+def eliminar_libro(titulo):
+    if titulo in biblioteca:
+        biblioteca.remove(titulo)
+        print(f'Libro"{titulo}" eliminado correctamente.')
+    else:
+        print(f'El libro "{titulo}" no se encuentra en la biblioteca.')
+#Buscar un libro por título
+def buscar_libro(titulo):
+    if titulo in biblioteca:
+        print(f'El libro "{titulo}" está disponible.')
+        return True
+    else:
+        print(f'El libro "{titulo}" no está disponible.')
+        return False
+#Mostrar todos los libros disponibles
+    def mostrar_libros():
+        if len(biblioteca) == 0:
+            print("No hay libros disponibles.")
+        else:
+            print("\nLibros disponibles:")
+for libro in biblioteca:
+    print("-", libro)
+
+#PRUEBA
+#Se agregan los cuatro libros
+agregar_libro("Vocación y pueblo: Médicos de Isla Mala")
+agregar_libro("Mil quinientos días en la cárcel por error")
+agregar_libro("Moiras")
+agregar_libro("Roger Federer")
+#Se muestran todos los libros
+mostrar_libros()
+#Se realiza una búsqueda
+buscar_libro("Moiras")
+#Se elimina un libro
+eliminar_libro("Roger Federer")
+#Se muestra nuevamente los libros
+mostrar_libros()
