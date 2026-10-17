@@ -1,0 +1,25 @@
+#Esta función recibe un número y devuelve True si es primo.
+#Devuelve False si el número tiene divisores distintos de 1 y de sí mismo. 
+def es_primo(numero):
+    if numero < 2:
+        return False
+    for i in range(2, numero):
+        if numero % i == 0:
+            return False
+    return True
+
+#Esta función recibe una lista de números y cuenta cuántos de ellos son números primos. 
+def contar_primos(lista):
+    contador = 0
+    for numero in lista:
+        if es_primo(numero):
+            contador += 1
+    return contador
+
+#Función predominante del programa.
+#Crea una lista de números, calcula la cantidad de primos y muestra el resultado en pantalla. 
+def main():
+    numeros = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print("Lista:", numeros)
+    print("Cantidad de números primos:", contar_primos(numeros))
+main()

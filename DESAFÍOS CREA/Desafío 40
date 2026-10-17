@@ -1,0 +1,14 @@
+#Desafío 40
+#Se definen los números
+a = 50
+b = 5
+
+def MCD(a, b):
+    if b == 0:
+        return a
+    return MCD(b, a % b)
+
+c = MCD(a, b)
+
+#Se muestra el resultado
+print("El MCD es:", c)

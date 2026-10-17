@@ -1,0 +1,8 @@
+#Se solicita al usuario un texto
+texto=input ("Por favor ingrese un texto: ")
+
+#Conteo de palabras
+cantidad_de_palabras=len (texto.split())
+
+#Mostrar el resultado
+print ("El texto posee", cantidad_de_palabras, "palabras.")

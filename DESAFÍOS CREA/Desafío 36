@@ -1,0 +1,17 @@
+def negrita(texto):
+    #Se agrega dos asteriscos a cada lado del texto.
+    return f"**{texto}**"
+
+def italica(texto):
+    #Se agrega un asterisco a cada lado del texto.
+    return f"*{texto}*"
+
+def subrayado(texto):
+    #Se utiliza etiquetas HTML para subrayar el texto.
+    return f"<u>{texto}</u>"
+#Se importa las funciones del módulo personalizado.
+from procesador_texto import negrita, italica, subrayado
+#Se prueba las tres funciones.
+print(negrita("Hola mundo"))
+print(italica("Hola mundo"))
+print(subrayado("Hola mundo"))

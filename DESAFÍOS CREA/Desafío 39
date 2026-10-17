@@ -1,0 +1,19 @@
+#Se importa datetime para trabajar con fechas
+from datetime import datetime
+
+#El usuario ingresa la primera fecha
+fecha1 = input("Ingrese la primera fecha (dd/mm/aaaa): ")
+
+#El usuario ingresa la segunda fecha
+fecha2 = input("Ingrese la segunda fecha (dd/mm/aaaa): ")
+
+# Se convierte las fechas ingresadas a formato de fecha
+fecha1 = datetime.strptime(fecha1, "%d/%m/%Y")
+fecha2 = datetime.strptime(fecha2, "%d/%m/%Y")
+
+#Se calcula la diferencia entre las dos fechas
+diferencia = abs(fecha2 - fecha1)
+
+#Se muestra la diferencia en días
+print("La diferencia entre las fechas es de:", diferencia.days, "días")
+

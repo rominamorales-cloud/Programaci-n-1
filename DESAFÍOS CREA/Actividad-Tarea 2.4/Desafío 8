@@ -1,0 +1,38 @@
+#Programa que verifica si un número es múltiplo de varios divisores utilizando el operador módulo
+#Solicitar un número entero al usuario
+numero = int(input("Ingrese un número entero: "))
+# Verificar si es múltiplo de 2
+if numero % 2 == 0:
+    print(numero, "es múltiplo de 2")
+else:
+    print(numero, "no es múltiplo de 2")
+#Verificar si es múltiplo de 3
+if numero % 3 == 0:
+    print(numero, "es múltiplo de 3")
+else:
+    print(numero, "no es múltiplo de 3")
+#Verificar si es múltiplo de 5
+if numero % 5 == 0:
+    print(numero, "es múltiplo de 5")
+else:
+    print(numero, "no es múltiplo de 5")
+#Verificar si es múltiplo de 7
+if numero % 7 == 0:
+    print(numero, "es múltiplo de 7")
+else:
+    print(numero, "no es múltiplo de 7")
+# Verificar si es múltiplo de 9
+if numero % 9 == 0:
+    print(numero, "es múltiplo de 9")
+else:
+    print(numero, "no es múltiplo de 9")
+# Verificar si es múltiplo de 10
+if numero % 10 == 0:
+    print(numero, "es múltiplo de 10")
+else:
+    print(numero, "no es múltiplo de 10")
+# Verificar si es múltiplo de 11
+if numero % 11 == 0:
+    print(numero, "es múltiplo de 11")
+else:
+    print(numero, "no es múltiplo de 11")

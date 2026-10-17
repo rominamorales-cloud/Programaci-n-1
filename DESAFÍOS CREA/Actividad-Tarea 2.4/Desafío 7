@@ -1,0 +1,12 @@
+#Programa que convierte una temperatura de Celsius a Fahrenheit y Kelvin
+#Solicitar al usuario una temperatura en grados Celsius
+celsius = float(input("Ingrese la temperatura en grados Celsius: "))
+# Conversión a Fahrenheit
+fahrenheit = (celsius * 9 / 5) + 32
+# Conversión a Kelvin
+kelvin = celsius + 273.15
+# Mostrar los resultados
+print("\nResultados de las conversiones:")
+print("Temperatura en Celsius:", celsius, "°C")
+print("Temperatura en Fahrenheit:", fahrenheit, "°F")
+print("Temperatura en Kelvin:", kelvin, "K")

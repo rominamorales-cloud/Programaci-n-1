@@ -1,0 +1,14 @@
+#Desafío 42
+#Se define la oración
+oracion = "Hola como estas"
+
+def invertir_palabras(oracion):
+    palabras = oracion.split()
+
+    if len(palabras) == 1:
+        return palabras[0]
+
+    return invertir_palabras(" ".join(palabras[1:])) + " " + palabras[0]
+
+#Se muestra el resultado
+print(invertir_palabras(oracion))

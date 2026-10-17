@@ -1,0 +1,25 @@
+import random
+
+auto_violeta=0
+
+auto_rojo=0
+
+auto_amarillo=0
+
+for segundo in range (10):
+	auto_violeta+=random.randint(1,10)
+	auto_rojo+=random.randint(1,10)
+	auto_amarillo+=random.randint(1,10)
+
+print ("Distancia Violeta:", auto_violeta)
+print ("Distancia Rojo:", auto_rojo)
+print ("Distancia Amarillo:", auto_amarillo)
+
+maximo=max (auto_violeta,auto_rojo,auto_amarillo)
+print ("Ganador(es):")
+
+if auto_violeta==maximo: print ("Violeta")
+
+if auto_rojo==maximo:print ("Rojo")
+
+if auto_amarillo==maximo:print ("Amarillo")
