@@ -1,0 +1,28 @@
+#Desafío 70-Solución
+import math  # Importa el módulo para calcular raíces cuadradas
+
+#Se crea una excepción personalizada
+class NegativeNumberError(Exception):
+    pass  # Permite utilizar la excepción personalizada
+
+try:
+    #Se solicita al usuario un número
+    numero = float(input("Ingresa un número para calcular su raíz cuadrada: "))
+
+    #Se verifica si el número es negativo
+    if numero < 0:
+        # Dispara la excepción personalizada
+        raise NegativeNumberError("No se puede calcular la raíz cuadrada de un número negativo.")
+
+    #Se calcula la raíz cuadrada si el número es válido
+    raiz = math.sqrt(numero)
+    #Se muestra el resultado
+    print(f"La raíz cuadrada de {numero} es {raiz}")
+
+#Captura la excepción personalizada
+except NegativeNumberError as error:
+    print(f"Error: {error}")
+
+#Captura el error si el usuario ingresa un dato no numérico
+except ValueError:
+    print("Error: Debés ingresar un número válido.")

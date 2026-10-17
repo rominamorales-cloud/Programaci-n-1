@@ -1,0 +1,60 @@
+#Desafío 59-Solución:
+class Libro:
+    def __init__(self, titulo, autor, isbn):
+        self.titulo = titulo
+        self.autor = autor
+        self.isbn = isbn
+#LibroDigital hereda de Libro
+class LibroDigital(Libro):
+        def __init__(self, titulo, autor, isbn, formato, tamaño_archivo):
+# Llamamos al constructor de Libro
+            super().__init__(titulo, autor, isbn) 
+#Se agrega datos propios del libro digital
+            self.formato = formato
+            self.tamaño_archivo = tamaño_archivo
+#Se muestra la información del libro
+def mostrar_informacion(self):
+    print("Título:", self.titulo)   
+    print("Autor:", self.autor)
+    print("ISBN:", self.isbn)
+    print("Formato:", self.formato)
+    print("Tamaño:", self.tamaño_archivo)
+#EBook hereda de LibroDigital
+class EBook(LibroDigital):
+    def __init__(self, titulo, autor, isbn, formato, tamaño_archivo, enlace_descarga):
+#Se usa el constructor de LibroDigital
+        super().__init__(titulo, autor, isbn, formato, tamaño_archivo)
+#Se agrega el enlace de descarga
+        self.enlace_descarga = enlace_descarga
+#Se modifica el método para agregar el enlace
+def mostrar_informacion(self):
+    print("Título:", self.titulo)
+    print("Autor:", self.autor)
+    print("ISBN:", self.isbn)
+    print("Formato:", self.formato)
+    print("Tamaño:", self.tamaño_archivo)
+    print("Enlace:", self.enlace_descarga)
+#Se crea un LibroDigital
+libro_digital = LibroDigital(
+"Isla Mala",
+"Autor Ejemplo",
+"123456",
+"PDF",
+"5 MB"
+)
+#Se crea un EBook
+ebook = EBook(
+"Python desde cero",
+"Autor Ejemplo",
+"789012",
+"EPUB",
+"3 MB",
+"www.ejemplo.com"
+)
+#Se muestra la información
+print("LIBRO DIGITAL")
+libro_digital.mostrar_informacion()
+print("\nEBOOK")
+ebook.mostrar_informacion()
+#RESPUESTA:
+#Las partes que se pueden reutilizar son los datos de Libro, como título, autor e ISBN, y los de LibroDigital, como formato y tamaño. Con respecto al EBook en el código se agregó el enlace de descarga y modificando "mostrar_informacion()" para mostrarlo

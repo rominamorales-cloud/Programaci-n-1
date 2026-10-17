@@ -1,0 +1,16 @@
+#Desafío 67-Solicita al usuario dos números enteros e implementa un try-except que maneje la división por cero y los valores no numéricos. Muestra mensajes de error apropiados en cada caso.
+#SOLUCIÓN
+
+try:
+#Se solicita dos números enteros al usuario
+    numero1 = int(input("Ingresa el primer número entero: "))
+    numero2 = int(input("Ingresa el segundo número entero: "))
+    resultado = numero1 / numero2
+#Muestra del resultado
+    print("El resultado de la división es:", resultado)
+#Se ejecuta si el usuario ingresa algo que no es un número entero
+except ValueError:
+    print("Error: debes ingresar únicamente números enteros.")
+#Se ejecuta si el segundo número es 0
+except ZeroDivisionError:
+    print("Error: no se puede dividir entre cero.")

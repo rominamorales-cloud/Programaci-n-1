@@ -36,10 +36,10 @@ agregar_libro("Mil quinientos días en la cárcel por error")
 agregar_libro("Moiras")
 agregar_libro("Roger Federer")
 #Se muestran todos los libros
-mostrar_libros()
+mostrar_libros() # type: ignore
 #Se realiza una búsqueda
 buscar_libro("Moiras")
 #Se elimina un libro
 eliminar_libro("Roger Federer")
 #Se muestra nuevamente los libros
-mostrar_libros()
+mostrar_libros() # type: ignore

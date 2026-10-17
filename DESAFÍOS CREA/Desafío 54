@@ -1,0 +1,62 @@
+#SOLUCIÓN
+#Se crea la clase Autor
+class Autor:
+#Datos del autor
+    def __init__(self, nombre, nacionalidad):
+        self.__nombre = nombre
+        self.__nacionalidad = nacionalidad
+#Property para acceder al nombre
+@property
+def nombre(self):
+    return self.__nombre
+#Setter para modificar el nombre
+@nombre.setter
+def nombre(self, nuevo_nombre):
+#Se verifica que no sea una cadena vacía
+        if nuevo_nombre == "":
+            raise ValueError("El nombre no puede estar vacío.")
+#Si el valor es correcto se asigna
+        self.__nombre = nuevo_nombre
+#Property para acceder a la nacionalidad
+@property
+def nacionalidad(self):
+    return self.__nacionalidad
+#Setter para modificar la nacionalidad
+@nacionalidad.setter
+def nacionalidad(self, nueva_nacionalidad):
+#Se verifica que no sea una cadena vacía
+    if nueva_nacionalidad == "":
+        raise ValueError("La nacionalidad no puede estar vacía.")
+#Si el valor es correcto se asigna
+        self.__nacionalidad = nueva_nacionalidad
+#PRUEBA
+#Se crea un objeto de la clase Autor
+autor1 = Autor("Diego Fisher", "Uruguaya")
+#Se muestra sus datos utilizando las propiedades
+print("Datos del autor:")
+print("Nombre:", autor1.nombre)
+print("Nacionalidad:", autor1.nacionalidad)
+print("Obra: La gran farsa")
+#Se modifican los datos utilizando los setter
+autor1.nombre = "Diego Fisher"
+autor1.nacionalidad = "Uruguaya"
+print("\nDatos modificados:")
+print("Nombre:", autor1.nombre)
+print("Nacionalidad:", autor1.nacionalidad)
+#Se intenta asignar un valor vacío al nombre
+try:
+    autor1.nombre = ""
+except ValueError as error:
+    print("\nError:", error)
+#Se intenta asignar un valor vacío a la nacionalidad
+try:
+    autor1.nacionalidad = ""
+except ValueError as error:
+    print("Error:", error)
+#Muestra de los datos finales
+print("\nDatos finales:")
+print("Nombre:", autor1.nombre)
+print("Nacionalidad:", autor1.nacionalidad)
+print("Obra: La gran farsa")
+#RESPUESTA A LA PREGUNTA FINAL:
+#La ventaja que tiene usar @property es que permite controlar el acceso y los cambios de aquellos aspectos/atributos privados.

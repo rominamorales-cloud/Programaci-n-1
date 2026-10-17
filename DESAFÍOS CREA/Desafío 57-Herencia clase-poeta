@@ -1,0 +1,39 @@
+#SOLUCIÓN:
+#Se define la clase Autor
+class Autor:
+#Datos del autor
+    def __init__(self, nombre, nacionalidad):
+        self.nombre = nombre
+        self.nacionalidad = nacionalidad
+#Se muestra los datos del autor
+    def mostrar_autor(self):
+            print("Nombre:", self.nombre)
+    print("Nacionalidad:", self.nacionalidad)
+#Se define la clase Poeta a partir de Autor
+class Poeta(Autor):
+#Se recibe los datos generales y el tipo de poesía
+    def __init__(self, nombre, nacionalidad, tipo_poesia):
+        super().__init__(nombre, nacionalidad)
+#Se agrega un dato específico relacionado con el poeta
+        self.tipo_poesia = tipo_poesia
+#Se muestra toda la información del poeta
+def mostrar_poeta(self):
+    print("Nombre:", self.nombre)
+print("Nacionalidad:", self.nacionalidad) # type: ignore
+print("Tipo de poesía:", self.tipo_poesia) # type: ignore
+#Se crea dos objetos utilizando la clase Poeta
+poeta1 = Poeta("Pablo Neruda", "Chileno", "Poesía lírica")
+poeta2 = Poeta("Mario Benedetti", "Uruguayo", "Poesía social")
+#Se muestra la información completa de cada poeta
+print("===== DATOS DEL POETA 1 =====")
+poeta1.mostrar_poeta()
+print("\n===== DATOS DEL POETA 2 =====")
+poeta2.mostrar_poeta()
+#Se comprueba el uso de un método definido originalmente en Autor
+poeta1.mostrar_autor()
+#Se comprueba el acceso a los datos que fueron heredados de Autor
+print("\n===== DATOS HEREDADOS =====")
+print("Nombre:", poeta2.nombre)
+print("Nacionalidad:", poeta2.nacionalidad)
+#RESPUESTA A LA PREGUNTA FINAL:
+#La ventaja es que permite reutilizar los atributos y métodos de Autor, evitando repetir código

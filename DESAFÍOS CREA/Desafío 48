@@ -1,0 +1,63 @@
+#Desafío 48-SOLUCIÓN
+#Clase Autor
+class Autor:
+#Datos del autor
+    def __init__(self, nombre):
+            self.nombre = nombre
+            self.libros = []
+#Agregar un libro
+    def agregar_libro(self, libro):
+        self.libros.append(libro)
+#Eliminar un libro
+def eliminar_libro(self, libro):
+    if libro in self.libros:
+        self.libros.remove(libro)
+        print(f"El libro {libro.titulo} fue eliminado.")
+    else:
+        print("El libro no se encuentra en la lista.")
+#Mostrar los libros del autor
+def mostrar_autor(self):
+    print(f"Libros de {self.nombre}:")
+for libro in self.libros: # type: ignore
+    print("-", libro.titulo)
+#Clase Libro
+class Libro:
+#Datos del libro
+    def __init__(self, titulo, genero, isbn, autor):
+        self.titulo = titulo
+        self.genero = genero
+        self.isbn = isbn
+        self.autor = autor
+#PRUEBA
+autor = Autor("Autor de los libros")
+libro1 = Libro(
+"Vocación y pueblo: Médicos de Isla Mala",
+"Historia",
+"123456",
+autor
+)
+libro2 = Libro(
+"Mil quinientos días en la cárcel por error",
+"Historia",
+"123457",
+autor
+)
+libro3 = Libro(
+"Moiras",
+"Literatura",
+"123458",
+autor
+)
+libro4 = Libro(
+"Roger Federer",
+"Biografía",
+"123459",
+autor
+)
+autor.agregar_libro(libro1)
+autor.agregar_libro(libro2)
+autor.agregar_libro(libro3)
+autor.agregar_libro(libro4)
+autor.mostrar_autor()
+autor.eliminar_libro(libro4)
+autor.mostrar_autor()

@@ -1,0 +1,43 @@
+#Desafío 45
+#Agregar libro
+def agregar(biblioteca, titulo):
+    biblioteca.append(titulo)
+#Eliminar libro
+def eliminar(biblioteca, titulo):
+    if titulo in biblioteca:
+        biblioteca.remove(titulo)
+        print(f"El libro {titulo} fue eliminado.")
+    else:
+        print(f"El libro {titulo} no se encuentra en la biblioteca.")
+#Buscar un libro
+def buscar(biblioteca, titulo):
+    if titulo in biblioteca:
+        print(f"El libro {titulo} está disponible.")
+        return True
+    else:
+        print(f"El libro {titulo} no está disponible.")
+        return False
+#Mostrar los libros
+def mostrar(biblioteca):
+    for libro in biblioteca:
+        print("-", libro)
+#PRUEBA
+#Creación de dos bibliotecas
+biblioteca1 = []
+biblioteca2 = []
+#Se agregan libros a la primera biblioteca
+agregar(biblioteca1, "Vocación y pueblo: Médicos de Isla Mala")
+agregar(biblioteca1, "Moiras")
+#Se agregan libros a la segunda biblioteca
+agregar(biblioteca2, "Mil quinientos días en la cárcel por error")
+agregar(biblioteca2, "Roger Federer")
+#Se busca un libro en cada biblioteca
+buscar(biblioteca1, "Moiras")
+buscar(biblioteca2, "Roger Federer")
+#Se elimina un libro de la segunda biblioteca
+eliminar(biblioteca2, "Roger Federer")
+#Se muestra el contenido de ambas bibliotecas
+print("\nBiblioteca 1:")
+mostrar(biblioteca1)
+print("\nBiblioteca 2:")
+mostrar(biblioteca2)

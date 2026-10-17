@@ -1,0 +1,35 @@
+#Desafío 65-solución:
+#Clase principal
+class Figura:
+    def area(self):
+        pass
+#Clase para el círculo
+class Circulo(Figura):
+#Se guarda el radio
+    def __init__(self, radio):
+        self.radio = radio
+#Se calcula el área del círculo
+    def area(self):
+        return 3.14 * self.radio ** 2
+#Clase para el cuadrado
+    class Cuadrado(Figura):
+#Se guarda el lado
+        def __init__(self, lado):
+            self.lado = lado
+#Se calcula el área del cuadrado
+def area(self):
+    return self.lado ** 2
+#Se crea un círculo
+circulo = Circulo(5)
+#Se crea un cuadrado
+cuadrado = Cuadrado(4)
+#Dos figuras en una lista
+figuras = [circulo, cuadrado]
+#Se recorre la lista
+    
+for figura in figuras:
+#Se muestra el nombre de la figura
+    print("Figura:", figura.__class__.__name__)
+#Se muestra el área
+print("Área:", figura.area())
+#Respuesta final:Podemos usar el mismo método area() porque todas las figuras tienen ese método. Cada figura lo hace de una manera diferente.
