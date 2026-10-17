@@ -1,0 +1,14 @@
+#Desafío 73:
+#Tienes una lista de números en la que algunos elementos están repetidos. 
+#Desarrolla un programa que elimine todos los elementos duplicados 
+# y deje únicamente una aparición de cada uno. 
+# La salida debe mostrar la lista original y la lista sin duplicados.
+
+#Se crea una lista con números repetidos
+numeros = [1, 2, 3, 2, 4, 1, 5, 3]
+#Se muestra la lista original
+print("Lista original:", numeros)
+#Se crea una lista sin números repetidos, manteniendo el orden
+numeros_sin_duplicados = list(dict.fromkeys(numeros))
+#Se muestra la lista sin duplicados
+print("Lista sin duplicados:", numeros_sin_duplicados)
