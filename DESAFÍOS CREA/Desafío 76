@@ -1,0 +1,24 @@
+#Se crea la clase Nodo
+class Nodo:
+    def __init__(self, valor):
+        self.valor = valor
+        self.izquierdo = None
+        self.derecho = None
+#Se crea el árbol binario
+raiz = Nodo(1)
+raiz.izquierdo = Nodo(2)
+raiz.derecho = Nodo(3)
+raiz.izquierdo.izquierdo = Nodo(4)
+raiz.izquierdo.derecho = Nodo(5)
+raiz.derecho.izquierdo = Nodo(6)
+raiz.derecho.derecho = Nodo(7)
+
+def preorden(nodo):
+    if nodo is None:
+        return
+    print(nodo.valor)
+    preorden(nodo.izquierdo)
+    preorden(nodo.derecho)
+#Se muestran los resultados
+print("Recorrido en preorden:")
+preorden(raiz)
