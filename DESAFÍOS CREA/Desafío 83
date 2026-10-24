@@ -1,0 +1,24 @@
+#Desafío 83
+def buscar_estudiante(estudiantes, nombre):
+    inicio = 0
+    fin = len(estudiantes) - 1
+    #Se busca mientras haya elementos
+    while inicio <= fin:
+        medio = (inicio + fin) // 2
+
+        #Verificar si es el nombre buscado
+        if estudiantes[medio] == nombre:
+            print("Estudiante encontrado:", nombre)
+            return
+  
+        elif estudiantes[medio] < nombre:
+            inicio = medio + 1
+        else:
+            fin = medio - 1
+    #Si no se encuentra el estudiante
+    print("El estudiante no está en la lista.")
+#Lista ordenada alfabéticamente
+estudiantes = ["Anastasia", "Braulio", "Carlitos", "Diana", "Luzmila", "Peter"]
+#Se realiza la búsqueda
+buscar_estudiante(estudiantes, "Juan")
+buscar_estudiante(estudiantes, "Diana")
