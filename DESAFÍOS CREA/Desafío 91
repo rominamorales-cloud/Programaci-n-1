@@ -1,0 +1,12 @@
+#Desafío 91
+import random
+#Lista para almacenar las temperaturas
+temperaturas = []
+
+#10 temperaturas aleatorias
+for i in range(10):
+    temperatura = random.uniform(-10.0, 40.0)
+    temperaturas.append(temperatura)
+    
+print("Temperaturas simuladas:")
+print(temperaturas)

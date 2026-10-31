@@ -1,0 +1,20 @@
+#Desafío 86- 
+#Se abre el programa
+print("=== REGISTRO DE PRÉSTAMOS DE LIBROS ===")
+
+#Se pide los datos del préstamo
+libro = input("Ingrese el nombre del libro: ")
+prestatario = input("Ingrese el nombre del prestatario: ")
+fecha = input("Ingrese la fecha del préstamo: ")
+
+#Se abre el archivo en modo "a" para agregar datos
+archivo = open("prestamos.txt", "a", encoding="utf-8")
+#Se guardan los datos en el archivo
+archivo.write("Libro: " + libro + "\n")
+archivo.write("Prestatario: " + prestatario + "\n")
+archivo.write("Fecha: " + fecha + "\n")
+archivo.write("-------------------------\n")
+
+#Cierre del archivo el archivo
+archivo.close()
+print("El préstamo se registró correctamente.")
